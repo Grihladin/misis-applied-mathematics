@@ -1,4 +1,4 @@
-# Discrete Mathematics Coursework  
+# Discrete Mathematics Coursework (MISIS)
 ## Red-Black Tree Implementation
 
 A self-balancing Red-Black tree implementation in C++ with modular design and terminal visualization.
