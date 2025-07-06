@@ -1,1 +1,28 @@
-BeelderBuild
+# Build directories
+objects/
+
+# Executable
+red_black_tree
+
+# Output files
+*.dot
+*.png
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*~
+*.bak
+
+# Compiled binaries
+*.exe
+*.out
+red_black_tree
