@@ -6,10 +6,9 @@ Most of the original work was produced between 2022 and 2023.
 
 ## Historical note
 
-This coursework predates the widespread availability of generative AI coding
+This projects were done before the widespread availability of generative AI coding
 assistants. The implementations were written by hand, without AI-generated
-code. They are preserved as historical student work rather than presented as
-modern, production-ready software.
+code.
 
 ## Projects
 
@@ -43,5 +42,4 @@ in this archive are Michael Ratke's coursework.
 
 This is a read-only educational archive. Dependencies and APIs reflect the
 period in which each project was written and may require older environments to
-run. Individual projects retain their own license files where one was originally
-provided; there is no single repository-wide license.
+run. Its just history i love and dont want to delete. 
