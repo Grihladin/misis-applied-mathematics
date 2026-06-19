@@ -1,2 +1,12 @@
-# 3D-Cube-Rotation
-Just a little 3d practice, interesting math + matplotlib, pygame and numpy study. I tried OpenGL, that is not for me, too old. 
+# 3D Rotation Experiments
+
+A small computer-graphics study exploring 3D transformations without relying
+on a game engine.
+
+- `CubeRotate.py` defines cube vertices, applies rotation and projection
+  matrices with NumPy, and renders the result with Pygame.
+- `OpenGl.py` is a separate OpenGL experiment with lighting, geometry, and
+  keyboard-controlled rotation.
+
+This is historical coursework written manually without generative-AI-produced
+code.
