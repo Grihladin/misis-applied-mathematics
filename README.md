@@ -1,6 +1,6 @@
-# MISIS Applied Mathematics Coursework
+# MISIS Applied Mathematics
 
-A consolidated archive of coursework completed during my Bachelor's degree in
+A consolidated archive of projects completed during my Bachelor's degree in
 Applied Mathematics at the National University of Science and Technology MISIS.
 Most of the original work was produced between 2022 and 2023.
 
