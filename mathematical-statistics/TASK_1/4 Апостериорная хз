@@ -1,0 +1,27 @@
+Апостериорная функция в этом случае не формулируется явно, 
+как это делается в байесовской статистике с использованием априорных распределений и вероятностных моделей.
+Оценка параметров модели проводится на основе данных и методов статистического вывода.
+
+import numpy as np
+import pandas as pd
+from statsmodels.tsa.arima.model import ARIMA
+
+# ARIMA модель и временной ряд data случайно сгенерированный 
+np.random.seed(0)
+data = pd.Series(np.random.randn(1000), index=pd.date_range('2022-01-01', periods=1000))
+
+# Создание и обучение ARIMA модели с statsmodels
+model = ARIMA(data, order=(1, 1, 1))  # Пример параметров: p=1, d=1, q=1
+result = model.fit()
+
+# Получение оценок параметров модели ARIMA
+print(result.summary())
+
+
+# Оценка параметров доступна в result.params и других атрибутах result
+
+# Пример вывода параметров модели:
+print("Оценка коэффициентов ARIMA:")
+print("AR коэффициент:", result.arparams)
+print("MA коэффициент:", result.maparams)
+print("Константа (интегрирование):", result.params[0])
