@@ -1,45 +1,48 @@
-# Discrete Mathematics Coursework (MISIS)
-## Red-Black Tree Implementation
+# Red-Black Tree
 
-A self-balancing Red-Black tree implementation in C++ with modular design and terminal visualization.
+A self-balancing tree implementation created for a Discrete Mathematics course
+at MISIS in 2022 and later reorganized into a clearer C++ project.
 
-## Features
+## What was implemented
 
-- **Self-balancing Red-Black Tree**: Maintains O(log n) operations
-- **Modular Design**: Split into logical components for maintainability
-- **Terminal Visualization**: Beautiful tree display in console
-- **STL-style Interface**: Similar to `std::set`
-- **Template-based**: Works with any comparable type
+- template-based storage for comparable types;
+- insertion, deletion, lookup, and balancing;
+- an interface inspired by `std::set`;
+- terminal visualization of the tree structure;
+- a demonstration program covering several insert and erase sequences.
 
-## Implementation Details
+The implementation maintains the standard red-black tree properties:
 
-The red-black tree maintains these properties:
-1. Every node is either red or black
-2. The root is always black
-3. Red nodes cannot have red children
-4. Every path from root to leaf contains the same number of black nodes
+1. Every node is red or black.
+2. The root is black.
+3. A red node cannot have a red child.
+4. Every path from a node to a leaf contains the same number of black nodes.
 
-This ensures O(log n) time complexity for insertions, deletions, and searches.
+These constraints keep insertion, deletion, and lookup at `O(log n)`.
 
-## Getting Started
+## Technologies
 
-### Prerequisites
-- C++17 compatible compiler (g++, clang++)
-- Make build system
+- C++17
+- Template-based headers
+- Make
 
-### Quick Start
+## Running the project
+
 ```bash
-# Clone the repository
-git clone https://github.com/Grihladin/red-black-tree.git
-
-# Navigate to project directory
 cd red-black-tree
-
-# Build and run the demo
 make run
 ```
 
-## Project Structure
+From the consolidated repository root, use:
+
+```bash
+cd discrete-mathematics/red-black-tree
+make run
+```
+
+Use `make fclean` to remove the executable and object files.
+
+## Structure
 
 ```
 red-black-tree/
@@ -60,3 +63,16 @@ red-black-tree/
 │   └── main.cpp                   # Demo program with tree operations
 └── Makefile                       # Build system with targets (all, run, clean, fclean)
 ```
+
+## Known limitations
+
+- This is an educational implementation and has no automated test suite.
+- The API covers the operations needed by the demonstration rather than the
+  complete `std::set` interface.
+- Terminal output includes Unicode symbols and assumes a compatible terminal.
+
+## Historical note
+
+The original implementation was written by hand before generative AI coding
+assistants became widely available. Its later cleanup retained the underlying
+student implementation.

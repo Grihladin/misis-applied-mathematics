@@ -1,27 +1,72 @@
 # Rasa Commerce Assistant
 
-Laboratory project for the Artificial Intelligence Methods course at the
-National University of Science and Technology MISIS.
+An English-language conversational shopping assistant created for the
+Artificial Intelligence Methods course at MISIS in 2023.
 
-The project implements a conversational shopping assistant using Rasa. It
-recognizes customer intents, manages dialogue forms and slots, and uses custom
-Python actions with SQLite for registration, authentication, inventory checks,
-reservations, cart operations, order status, cancellation, and returns.
+## What was implemented
 
-## Main components
+The assistant uses Rasa to recognize customer intents and manage dialogue
+forms, entities, and slots. Custom Python actions connect the conversation to a
+small SQLite store supporting:
 
-- `data/` contains NLU examples, stories, and dialogue rules.
-- `domain.yml` defines intents, entities, slots, forms, and responses.
-- `actions/actions.py` contains the custom business actions.
-- `initialize_db.py` creates the demonstration inventory, users, and orders.
-- `tests/` contains Rasa conversation tests.
+- registration and sign-in;
+- inventory checks and shoe reservations;
+- cart operations;
+- order status, cancellation, and returns;
+- feedback and product-update flows.
 
-Generated Rasa caches and trained model archives were intentionally omitted from
-the consolidated archive because they can be reproduced from the source files.
+The project structure follows a standard Rasa application: training examples,
+stories, and rules live in `data/`; dialogue definitions are in `domain.yml`;
+and business logic is in `actions/actions.py`.
+
+## Technologies
+
+- Python
+- Rasa 3.2 and Rasa SDK 3.2
+- SQLite
+- Duckling entity extraction
+
+## Running the project
+
+This project uses an older dependency set and is best treated as an archival
+Rasa 3.2 application.
+
+```bash
+pip install -r requirements.txt
+python initialize_db.py
+rasa train
+```
+
+Run the custom-action server in one terminal:
+
+```bash
+rasa run actions
+```
+
+Then start an interactive conversation in another:
+
+```bash
+rasa shell
+```
+
+`config.yml` expects a Duckling service at `http://localhost:8000` for number
+and email extraction.
+
+## Known limitations
+
+- The dependency lock reflects the original environment and may not install on
+  current Python versions without adjustment.
+- Passwords are stored as plain text because this is a classroom prototype,
+  not a production authentication system.
+- Some user-facing responses remain in Russian.
+- Generated Rasa caches and trained model archives were omitted because they
+  can be reproduced from the source.
 
 ## Authors
 
 Michael Ratke and Daria Sergeeva, fourth-year students in group BPM-20-4.
 
-This is historical coursework written manually without generative-AI-produced
-code.
+## Historical note
+
+The project was written by hand before generative AI coding assistants became
+widely available. It is preserved as historical student work.

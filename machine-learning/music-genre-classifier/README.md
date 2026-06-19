@@ -1,40 +1,57 @@
 # Music Genre Classifier
 
-A simple neural network that predicts music genres from Mel-frequency cepstral coefficients (MFCCs).
+A neural-network experiment created for MISIS in 2023 to classify music genres
+from Mel-frequency cepstral coefficients (MFCCs).
 
-## Prerequisites
+## What was implemented
 
-Install the required Python packages:
+- `preprocess.py` loads 30-second audio tracks, divides them into segments, and
+  extracts 13 MFCC coefficients using Librosa.
+- `genreClassifier.py` loads the generated feature data, creates a
+  training/validation split, and trains a dense TensorFlow classifier for ten
+  output classes.
 
-```
+## Technologies
+
+- Python
+- Librosa
+- NumPy
+- scikit-learn
+- TensorFlow/Keras
+
+## Running the project
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Preparing the Dataset
+Organize the audio dataset into one directory per genre:
 
-1. Organize your audio files in subfolders named after each genre, e.g. `dataset/rock/*.wav`, `dataset/classical/*.wav`.
-2. Update `DATASET_PATH` and `JSON_PATH` at the top of `preprocess.py` to match your folder structure.
-3. Run the preprocessing script to extract MFCC features:
-
-```
-python preprocess.py
-```
-
-This generates a JSON file with MFCC arrays and labels for every segment.
-
-## Training the Model
-
-1. Set `DATA_PATH` in `genreClassifier.py` to point to the JSON generated above.
-2. Start training the classifier:
-
-```
-python genreClassifier.py
+```text
+dataset/
+├── classical/
+├── jazz/
+└── rock/
 ```
 
-The script will split the data into training and validation sets, build a dense neural network, and print accuracy metrics.
+Then:
 
-## Next Steps
+1. Set `DATASET_PATH` and `JSON_PATH` in `preprocess.py`.
+2. Extract the MFCC data with `python preprocess.py`.
+3. Set `DATA_PATH` in `genreClassifier.py` to the generated JSON file.
+4. Train the classifier with `python genreClassifier.py`.
 
-- Experiment with different network architectures or hyperparameters.
-- Add evaluation on a separate test set or cross-validation.
-- Integrate the model into an application or API endpoint.
+## Known limitations
+
+- The audio dataset is not included.
+- Paths are configured directly in the scripts rather than through command-line
+  arguments.
+- The original experiment showed overfitting and does not include a separate
+  test set, cross-validation, model export, or reproducible random seed.
+- The network assumes ten genre classes.
+
+## Historical note
+
+The implementation was written by hand before generative AI coding assistants
+became widely available. It is preserved as an early machine-learning
+experiment, including its original limitations.
