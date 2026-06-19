@@ -4,7 +4,7 @@ This is a collection of projects I completed during my Bachelor's degree in
 Applied Mathematics at MISIS, mostly between 2022 and 2023.
 
 I brought them together in one place because they are part of my history. Some
-are small, some are unfinished, and some are a little rough—but I learned
+are small, some are unfinished, and some are a little rough, but I learned
 something from every one of them, and I didn't want to simply delete them.
 
 This was also before generative AI coding assistants became widely available,
