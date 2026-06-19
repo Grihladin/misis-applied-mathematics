@@ -1,14 +1,14 @@
 # MISIS Applied Mathematics
 
-A consolidated archive of projects completed during my Bachelor's degree in
-Applied Mathematics at the National University of Science and Technology MISIS.
-Most of the original work was produced between 2022 and 2023.
+This is a collection of projects I completed during my Bachelor's degree in
+Applied Mathematics at MISIS, mostly between 2022 and 2023.
 
-## Historical note
+I brought them together in one place because they are part of my history. Some
+are small, some are unfinished, and some are a little rough—but I learned
+something from every one of them, and I didn't want to simply delete them.
 
-This projects were done before the widespread availability of generative AI coding
-assistants. The implementations were written by hand, without AI-generated
-code.
+This was also before generative AI coding assistants became widely available,
+so all of the implementations were written by hand.
 
 ## Projects
 
@@ -21,25 +21,12 @@ code.
 | Mathematical statistics | [Statistics laboratory work](mathematical-statistics) | ARIMA, likelihood estimation, non-parametric regression, mixture models, and sampling methods |
 | Systems analysis | [Systems analysis tasks](systems-analysis) | Trees, relationship matrices, entropy, rankings, and expert-agreement calculations |
 
-## Repository history
+I preserved the original Git histories when I combined the projects. I removed
+generated caches, trained model files, and IDE clutter—I was still treating Git
+like cloud storage back then—but kept the source code and the actual work.
 
-The projects were imported from their original repositories with their Git
-histories retained. Generated Rasa caches, trained model archives, IDE metadata,
-and other reproducible build artifacts were excluded from the AI project during
-consolidation. Source code and coursework materials remain intact.
+Some comments, filenames, and exercise notes are still in Russian. That is how
+the projects were originally written, and I chose to leave them that way.
 
-Some original source comments and exercise text remain in Russian to preserve
-the submitted work. The project summaries and navigation documentation are
-provided in English.
-
-## Attribution
-
-The Rasa commerce assistant was completed collaboratively by Michael Ratke and
-Daria Sergeeva, fourth-year students in group BPM-20-4. The remaining projects
-in this archive are Michael Ratke's coursework.
-
-## Status
-
-This is a read-only educational archive. Dependencies and APIs reflect the
-period in which each project was written and may require older environments to
-run. Its just history i love and dont want to delete. 
+The Rasa commerce assistant was a joint project with Daria Sergeeva. Everything
+else here is my own university work.
